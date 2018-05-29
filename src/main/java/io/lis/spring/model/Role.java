@@ -21,31 +21,5 @@ public class Role {
     @Column(name = "name", unique = true)
     private String name;
 
-    @ManyToMany(mappedBy = "role")
-    private List<User> user = new ArrayList<>();
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public List<User> getUsers() {
-        return user;
-    }
-
-    public void setUsers(List<User> user) {
-        this.user = user;
-    }
 
 }
