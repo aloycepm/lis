@@ -1,0 +1,28 @@
+<!-- Dependency resources -->
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+
+<!-- Defines the example-template element -->
+<dom-module id="book-form">
+    <template>
+        <vaadin-vertical-layout>
+            <h2>BOOK MANAGER</h2>
+            <vaadin-text-field id="ISBN" label="ISBN"></vaadin-text-field>
+            <vaadin-text-field id="title" label="Title"></vaadin-text-field>
+            <vaadin-text-field id="year" label="Year"></vaadin-text-field>
+            <vaadin-text-field id="author" label="Author"></vaadin-text-field>
+            <vaadin-text-field id="publisher" label="Publisher"></vaadin-text-field>
+            <vaadin-button id="save">Save</vaadin-button>
+        </vaadin-vertical-layout>
+    </template>
+
+    <!-- Polymer boilerplate to register the example-template element -->
+    <script>
+        class ExampleTemplate extends Polymer.Element {
+            static get is() {
+                return 'book-form'
+            }
+        }
+
+        customElements.define(ExampleTemplate.is, ExampleTemplate);
+    </script>
+</dom-module>

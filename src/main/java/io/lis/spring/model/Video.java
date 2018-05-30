@@ -1,22 +1,30 @@
 package io.lis.spring.model;
 
-public class Document implements Media {
+public class Video implements Digital {
     private Long id;
     private String title;
     private String category;
     private Integer yearCreated;
     private Double price;
-    private String author;
+    private String producer;
 
-    public Document() {
+    private String director;
+
+    public Video() {
     }
 
-    public Document(String title, String category, Integer yearCreated, Double price, String author) {
+    public Video(String title, String category, Integer yearCreated, Double price, String producer, String director) {
         this.title = title;
         this.category = category;
         this.yearCreated = yearCreated;
         this.price = price;
-        this.author = author;
+        this.producer = producer;
+        this.director = director;
+    }
+
+    @Override
+    public String getProducer() {
+        return producer;
     }
 
     @Override
@@ -42,9 +50,5 @@ public class Document implements Media {
     @Override
     public Double getPrice() {
         return price;
-    }
-
-    public String getAuthor() {
-        return author;
     }
 }

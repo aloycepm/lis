@@ -1,5 +1,6 @@
 package io.lis.spring;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -18,7 +19,9 @@ public class AppServletInitializer extends SpringBootServletInitializer {
     @Override
     protected SpringApplicationBuilder configure(
             SpringApplicationBuilder builder) {
+
         return builder.sources(AppServletInitializer.class);
     }
+
 
 }
