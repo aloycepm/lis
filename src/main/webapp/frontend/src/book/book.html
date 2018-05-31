@@ -1,0 +1,20 @@
+<!-- Dependency resources -->
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+
+<!-- Defines the example-template element -->
+<dom-module id="book">
+    <template>
+       [value]
+    </template>
+
+    <!-- Polymer boilerplate to register the example-template element -->
+    <script>
+        class BookTemplate extends Polymer.Element {
+            static get is() {
+                return 'book'
+            }
+        }
+
+        customElements.define(BookTemplate.is, BookTemplate);
+    </script>
+</dom-module>

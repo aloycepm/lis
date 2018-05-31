@@ -6,20 +6,17 @@ import com.vaadin.flow.router.Route;
 import com.vaadin.flow.theme.Theme;
 import com.vaadin.flow.theme.lumo.Lumo;
 import io.lis.spring.template.BookForm;
+import io.lis.spring.template.BookTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 
-/**
- * The main view contains a simple label element and a template element.
- */
 @HtmlImport("styles/shared-styles.html")
-@Route("")
+@Route("book")
 @Theme(Lumo.class)
-public class MainView extends VerticalLayout {
+public class BookView extends VerticalLayout {
 
 
-    public MainView() {
-
+    public BookView(@Autowired BookForm bookForm,
+                    @Autowired BookTemplate bookTemplate) {
+        add(bookForm);
     }
-
-
 }

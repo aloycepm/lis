@@ -10,8 +10,8 @@ import io.lis.spring.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @HtmlImport("styles/shared-styles.html")
-@Route("books")
-public class BooksView extends Div implements
+@Route("book/list")
+public class BookListView extends Div implements
         BeforeEnterObserver {
 
     @Autowired
@@ -25,7 +25,7 @@ public class BooksView extends Div implements
         }
     }
 
-    public BooksView() {
+    public BookListView() {
 
     }
 
