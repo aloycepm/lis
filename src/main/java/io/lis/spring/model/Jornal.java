@@ -2,9 +2,10 @@ package io.lis.spring.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-public class Book {
+import java.time.LocalDate;
+
+public class Jornal {
     private Catalogue catalogue;
-    private String ISBN;
     private String ISSN;
-    private Integer year;
+    private LocalDate date;
 }
